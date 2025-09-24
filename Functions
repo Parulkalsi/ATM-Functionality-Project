@@ -1,0 +1,47 @@
+def show_Act_Balance(pin,Act_balance,user_pin):
+    if user_pin == pin:
+        print(f'Your account balance is Rs. {Act_balance}')
+
+    else:
+        print('Invalid Pin')
+
+
+def Cash_deposit(act_num,user_act_num,Act_balance):
+    if user_act_num == act_num:
+        n2000= int(input('2000* '))
+        n500=  int(input('500* '))
+        n200=  int(input('200* '))
+        n100=  int(input('100* '))
+
+        total = (2000*n2000) + (500*n500) + (200*n200) + (100*n100)
+
+        print(f'Your cash deposit is Rs. {total}')
+        print(f'Updated Act balance is Rs. {Act_balance+total}')
+    else:
+        print('Invalid Account No')
+
+def Cash_Withdrawal(user_pin,pin,Act_balance):
+    if user_pin == pin:
+
+        cash = int(input('Enter Cash to withdraw: '))
+        if cash <= Act_balance:
+            print(f'Your Account balance is Rs. {Act_balance - cash}')
+
+        else:
+            print('Insufficient Cash')
+
+    else:
+        print('Invalid Pin')
+
+
+def Pin_change(user_pin,pin):
+    if user_pin == pin:
+        new_pin = int(input('Enter new PIN: '))
+        if new_pin != user_pin:
+            print(f'Your Pin change Succesfully {new_pin}')
+
+        else:
+            print('Same as previous PIN')
+
+    else:
+        print('Invalid Pin')
