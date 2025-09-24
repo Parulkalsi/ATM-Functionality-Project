@@ -1,0 +1,34 @@
+from ATM_Functions import *
+
+pin= '1234'
+Act_balance= 100000
+act_num= '123456789'
+
+print('Welcome to ABC Bank'.center(50,'-'))
+
+print(' 1: Show Account balance')
+print(' 2: Cash deposit')
+print(' 3: Cash withdrawal')
+print(' 4: Pin Change')
+print()
+option= input('select from above option: ')
+
+if option == '1':
+    user_pin = input('Enter PIN: ')
+    show_Act_Balance(pin,Act_balance,user_pin)
+
+elif option == '2':
+    user_act_num = input('Enter Act Number: ')
+    Cash_deposit(act_num,user_act_num,Act_balance)
+
+elif option == '3':
+    user_pin = input('Enter PIN: ')
+    Cash_Withdrawal(user_pin,pin,Act_balance)
+
+
+elif option == '4':
+    user_pin = input('Enter PIN: ')
+    Pin_change(user_pin,pin)
+
+else:
+    print('Invalid option')
